@@ -27,7 +27,7 @@ SAMPLE_REVIEWS = [
 
 # HuggingFace summarization API (free tier, limited usage)
 HF_API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
-HF_HEADERS = {"Authorization": "Bearer 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"}  # User's HuggingFace token
+HF_HEADERS = {"Authorization": "Bearer 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"}  # User's HuggingFace token
 
 class SummarizeRequest(BaseModel):
     url: str
