@@ -25,9 +25,11 @@ SAMPLE_REVIEWS = [
     "Product is okay, but shipping was slow.",
 ]
 
+import os
 # HuggingFace summarization API (free tier, limited usage)
 HF_API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
-HF_HEADERS = {"Authorization": "Bearer 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"}  # User's HuggingFace token
+HF_API_TOKEN = os.environ.get("HF_API_TOKEN")
+HF_HEADERS = {"Authorization": f"Bearer {HF_API_TOKEN}"}  # Loaded from environment variable
 
 class SummarizeRequest(BaseModel):
     url: str
